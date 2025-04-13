@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tool di Intelligenza Artificiale</title>
+  <meta name="description" content="Scopri i migliori strumenti di Intelligenza Artificiale disponibili oggi">
+  
+  <!-- Preload -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rubik&display=swap" as="style">
+  <link rel="preload" href="assets/css/style.css" as="style">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rubik&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="particles-js"></div>
+  
+  <header>
+    <img src="assets/img/logo.webp" alt="Logo AI Futura - Strumenti IA" class="logo" width="120" height="60">
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="storia.html" class="nav-link">Storia</a>
+    </nav>
+  </header>
+
+  <h1>🧠 Tool di Intelligenza Artificiale</h1>
+  
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="🔍 Cerca un tool..." aria-label="Cerca strumenti IA">
+  </div>
+  
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-category="all">Tutti</button>
+    <button class="filter-btn" data-category="chat">Chat</button>
+    <button class="filter-btn" data-category="image">Immagini</button>
+    <button class="filter-btn" data-category="video">Video</button>
+    <button class="filter-btn" data-category="text">Testo</button>
+    <button class="filter-btn" data-category="audio">Audio</button>
+    <button class="filter-btn" data-category="code">Programmazione</button>
+    <button class="filter-btn" data-category="productivity">Produttività</button>
+    <button class="filter-btn" data-category="3d">3D</button>
+  </div>
+
+  <!-- Nuova Sezione Chat -->
+  <section class="tool-section animated-section">
+    <h2>💬 Chat Intelligenti</h2>
+
+    <details class="tool" data-category="chat" open>
+      <summary>DeepSeek Chat <span class="badge">Gratuito</span></summary>
+      <p>Chatbot avanzato con conoscenza fino al 2024, capacità di analisi documenti e risposte dettagliate su vari argomenti.</p>
+      <a href="https://chat.deepseek.com/" target="_blank" rel="noopener noreferrer">Chatta con DeepSeek</a>
+    </details>
+
+    <details class="tool" data-category="chat">
+      <summary>ChatGPT (OpenAI) <span class="badge">Freemium</span></summary>
+      <p>Il famoso chatbot di OpenAI con versione gratuita (GPT-3.5) e a pagamento (GPT-4).</p>
+      <a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">Accedi a ChatGPT</a>
+    </details>
+
+    <details class="tool" data-category="chat">
+      <summary>Claude AI <span class="badge">Freemium</span></summary>
+      <p>Chatbot sviluppato da Anthropic con particolare attenzione alla sicurezza e all'etica.</p>
+      <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Prova Claude</a>
+    </details>
+
+    <details class="tool" data-category="chat">
+      <summary>Gemini (ex Bard) <span class="badge">Gratuito</span></summary>
+      <p>Chatbot di Google con integrazione con i servizi dell'ecosistema Google.</p>
+      <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Usa Gemini</a>
+    </details>
+
+    <details class="tool" data-category="chat">
+      <summary>Perplexity AI <span class="badge">Freemium</span></summary>
+      <p>Chatbot focalizzato sulla precisione delle informazioni con citazione delle fonti.</p>
+      <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">Scopri Perplexity</a>
+    </details>
+  </section>
+
+  <!-- Sezione Principale Tool -->
+  <section class="tool-section animated-section">
+    <h2>🛠️ Tutti gli Strumenti</h2>
+
+    <details class="tool" data-category="image" open>
+      <summary>Adobe Firefly <span class="badge">Prova gratuita</span></summary>
+      <p>Strumento AI per generare immagini e effetti artistici a partire da comandi testuali. Integrato con Creative Cloud.</p>
+      <a href="https://firefly.adobe.com/" target="_blank" rel="noopener noreferrer">Prova Firefly</a>
+    </details>
+    
+    <details class="tool" data-category="image">
+      <summary>Leonardo.ai <span class="badge">Gratuito con limiti</span></summary>
+      <p>Piattaforma per la generazione di immagini ad alta risoluzione con prompt testuali e modelli personalizzati.</p>
+      <a href="https://leonardo.ai/" target="_blank" rel="noopener noreferrer">Scopri Leonardo</a>
+    </details>
+    
+    <details class="tool" data-category="video">
+      <summary>Descript <span class="badge">Prova gratuita</span></summary>
+      <p>Software di editing video/audio che utilizza l'intelligenza artificiale per trascrivere, modificare e clonare la voce.</p>
+      <a href="https://www.descript.com/" target="_blank" rel="noopener noreferrer">Visita Descript</a>
+    </details>
+    
+    <details class="tool" data-category="text">
+      <summary>Notion AI <span class="badge">A pagamento</span></summary>
+      <p>Estensione di Notion che aiuta nella scrittura di appunti, sintesi di contenuti e brainstorming con AI.</p>
+      <a href="https://www.notion.so/product/ai" target="_blank" rel="noopener noreferrer">Vai su Notion AI</a>
+    </details>
+    
+    <details class="tool" data-category="text">
+      <summary>Gamma.app <span class="badge">Gratuito con limiti</span></summary>
+      <p>Tool AI per creare presentazioni visive e professionali in pochi click da un prompt testuale.</p>
+      <a href="https://gamma.app/" target="_blank" rel="noopener noreferrer">Prova Gamma</a>
+    </details>
+    
+    <details class="tool" data-category="chat">
+      <summary>ChatGPT <span class="badge">Prova gratuita</span></summary>
+      <p>Chatbot AI avanzato per testi, traduzioni, codici e domande complesse.</p>
+      <a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">Accedi a ChatGPT</a>
+    </details>
+    
+    <details class="tool" data-category="image">
+      <summary>Midjourney <span class="badge">A pagamento</span></summary>
+      <p>Generazione immagini artistiche tramite prompt testuali su Discord.</p>
+      <a href="https://www.midjourney.com/" target="_blank" rel="noopener noreferrer">Visita Midjourney</a>
+    </details>
+    
+    <details class="tool" data-category="video">
+      <summary>Runway <span class="badge">Prova gratuita</span></summary>
+      <p>Piattaforma di editing video con funzionalità AI.</p>
+      <a href="https://runwayml.com/" target="_blank" rel="noopener noreferrer">Scopri Runway</a>
+    </details>
+    
+    <details class="tool" data-category="text">
+      <summary>Kimi K1.5 <span class="badge">Beta</span></summary>
+      <p>AI cinese evoluta per scrittura, sintesi e ricerca accademica.</p>
+      <a href="https://kimi.moonshot.cn/" target="_blank" rel="noopener noreferrer">Prova Kimi</a>
+    </details>
+    
+    <details class="tool" data-category="other">
+      <summary>Card Generator Validator <span class="badge">In sviluppo</span></summary>
+      <p>Tool per generare e validare layout interattivi (versione preview).</p>
+      <a href="#" target="_blank" rel="noopener noreferrer">Prossimamente</a>
+    </details>
+    
+    <details class="tool" data-category="video">
+      <summary>Clipify.ai <span class="badge">Gratuito</span></summary>
+      <p>Generatore video AI a partire da testo per social e marketing.</p>
+      <a href="https://clipify.ai/" target="_blank" rel="noopener noreferrer">Visita Clipify</a>
+    </details>
+    
+    <details class="tool" data-category="image">
+      <summary>Getimg.ai <span class="badge">Gratuito</span></summary>
+      <p>Crea, modifica, espandi e restaura immagini con intelligenza artificiale.</p>
+      <a href="https://getimg.ai/" target="_blank" rel="noopener noreferrer">Scopri Getimg</a>
+    </details>
+    
+    <details class="tool" data-category="image">
+      <summary>Fotor.com <span class="badge">Gratuito</span></summary>
+      <p>Editor fotografico online con strumenti AI per rimozione sfondi e miglioramenti.</p>
+      <a href="https://www.fotor.com/" target="_blank" rel="noopener noreferrer">Vai su Fotor</a>
+    </details>
+    
+    <details class="tool" data-category="image">
+      <summary>Insmind.com <span class="badge">Gratuito</span></summary>
+      <p>Rimuove oggetti dalle immagini in modo intelligente e pulito.</p>
+      <a href="https://www.insmind.com/" target="_blank" rel="noopener noreferrer">Prova Insmind</a>
+    </details>
+    
+    <details class="tool" data-category="text">
+      <summary>Flux1.ai <span class="badge">Prova gratuita</span></summary>
+      <p>Generatore testi, slogan, descrizioni e marketing automation.</p>
+      <a href="https://www.flux1.ai/" target="_blank" rel="noopener noreferrer">Visita Flux1</a>
+    </details>
+    
+    <details class="tool" data-category="text">
+      <summary>Talk to Books <span class="badge">Esperimento</span></summary>
+      <p>Tool sperimentale Google che risponde alle domande cercando tra testi di libri.</p>
+      <a href="https://books.google.com/talktobooks/" target="_blank" rel="noopener noreferrer">Provalo ora</a>
+    </details>
+    
+    <details class="tool" data-category="image">
+      <summary>Craiyon (ex DALL·E Mini) <span class="badge">Gratuito</span></summary>
+      <p>Generatore di immagini da testo, semplice e adatto a tutti.</p>
+      <a href="https://www.craiyon.com/" target="_blank" rel="noopener noreferrer">Vai su Craiyon</a>
+    </details>
+
+    <!-- Nuovi Tool Aggiunti -->
+    <details class="tool" data-category="image">
+      <summary>Stable Diffusion XL <span class="badge">Open Source</span></summary>
+      <p>Modello di generazione immagini open source di Stability AI, altamente personalizzabile.</p>
+      <a href="https://stablediffusionweb.com/" target="_blank" rel="noopener noreferrer">Prova SDXL</a>
+    </details>
+
+    <details class="tool" data-category="video">
+      <summary>Pika Labs <span class="badge">Gratuito</span></summary>
+      <p>Generazione e editing video tramite AI con prompt testuali.</p>
+      <a href="https://pika.art/" target="_blank" rel="noopener noreferrer">Esplora Pika</a>
+    </details>
+
+    <details class="tool" data-category="audio">
+      <summary>ElevenLabs <span class="badge">Freemium</span></summary>
+      <p>Sintesi vocale ultra-realistica e clonazione voci con intelligenza artificiale.</p>
+      <a href="https://elevenlabs.io/" target="_blank" rel="noopener noreferrer">Prova ElevenLabs</a>
+    </details>
+
+    <details class="tool" data-category="code">
+      <summary>GitHub Copilot <span class="badge">A pagamento</span></summary>
+      <p>Assistente per programmatori che suggerisce codice in tempo reale.</p>
+      <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">Scopri Copilot</a>
+    </details>
+
+    <details class="tool" data-category="3d">
+      <summary>Luma AI <span class="badge">Gratuito</span></summary>
+      <p>Genera modelli 3D da immagini o video con intelligenza artificiale.</p>
+      <a href="https://lumalabs.ai/" target="_blank" rel="noopener noreferrer">Prova Luma</a>
+    </details>
+  </section>
+
+  <button class="home-button" onclick="window.location.href='index.html'" aria-label="Torna alla home">🏠 Torna alla Home</button>
+
+  <footer>
+    &copy; 2025 - Selezione di strumenti IA
+  </footer>
+
+  <!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  // Carica main.js come modulo solo se necessario
+  if (document.querySelector('#searchInput') || document.querySelector('.filter-btn')) {
+    document.write('<script src="assets/js/main.js"><\/script>');
+  }
+</script>
+</body>
+</html>
