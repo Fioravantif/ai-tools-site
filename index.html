@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="erWakeSid_61JFzfatvT_COql9VA9hx-XQRvtkYetzM" />
-  <title>Benvenuto nel mio sito di intelligenza artificiale</title>
-  <meta name="description" content="Scopri i migliori strumenti gratuiti e a pagamento di intelligenza artificiale divisi per categoria: immagini, video, voce, testo, ricerca e molto altro.">
-  <meta name="keywords" content="intelligenza artificiale, AI tools, strumenti IA, AI gratis, AI immagini, AI video, chatbot, GPT, machine learning">
+  <title>Benvenuto nel mondo dell'Intelligenza Artificiale</title>
+  <meta name="description" content="Esplora la storia, gli strumenti e il potenziale dell'IA. Una guida visiva e moderna per scoprire l'intelligenza artificiale.">
+  <meta name="keywords" content="intelligenza artificiale, AI, storia IA, strumenti IA, AI gratis, machine learning, chatbot">
   <meta name="author" content="Fabio">
   <meta name="robots" content="index, follow">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rubik&display=swap" rel="stylesheet" />
+
+  <!-- Style -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Particles e ScrollReveal -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
-  <style>
-    /* (Qui sotto puoi mantenere il tuo stile già esistente) */
-  </style>
 </head>
 
 <body>
   <div id="particles-js"></div>
-  
+
+  <!-- Header -->
   <header>
     <img src="assets/img/logo.webp" alt="Logo AI Futura - Intelligenza Artificiale" class="logo" width="120" height="60">
     <nav class="nav-links">
@@ -29,23 +33,65 @@
     </nav>
   </header>
 
+  <!-- Sezione principale -->
   <main class="main-content animated-section">
-    <h1>Scopri la Potenza dell'Intelligenza Artificiale</h1>
-    <p>L'intelligenza artificiale non è più il futuro. È il presente. Esplora le sue origini, i migliori strumenti moderni e lasciati ispirare dalla rivoluzione digitale.</p>
+    <section class="tool-section">
+      <h1>✨ Benvenuto nel Futuro dell'IA</h1>
+      <p style="text-align: center; font-size: 1.2em;">
+        L'intelligenza artificiale sta cambiando il mondo. Scopri la sua storia, esplora strumenti utili e lasciati ispirare dalla potenza del digitale.
+      </p>
 
-    <div class="btn-container">
-      <button class="btn" onclick="window.location.href='storia.html'" aria-label="Scopri la storia dell'IA">📜 Storia dell'IA</button>
-      <button class="btn" onclick="window.location.href='tool.html'" aria-label="Esplora gli strumenti IA">🧠 Tool di IA</button>
-    </div>
+      <div class="btn-container">
+        <button class="btn" onclick="window.location.href='storia.html'" aria-label="Vai alla storia dell'IA">📜 Scopri la Storia</button>
+        <button class="btn" onclick="window.location.href='tool.html'" aria-label="Esplora gli strumenti IA">🧠 Esplora Tool IA</button>
+      </div>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    &copy; 2025 - Esplora l'IA con stile ✨
+    &copy; 2025 - Scopri l'intelligenza artificiale con stile ✨
+    <p style="text-align: center;">👁️ Visite totali: <span id="visite-counter">Caricamento...</span></p>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- Script principale -->
   <script type="module" src="assets/js/main.js"></script>
+
+  <!-- Firebase compatibile -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAwoTf5gfBy2fwWAsk2wubLKelieHNxQ10",
+      authDomain: "contatorevisiteai.firebaseapp.com",
+      databaseURL: "https://contatorevisiteai-default-rtdb.europe-west1.firebasedatabase.app/",
+      projectId: "contatorevisiteai",
+      storageBucket: "contatorevisiteai.appspot.com",
+      messagingSenderId: "729073780114",
+      appId: "1:729073780114:web:0646369c1a339713b32d4b"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+    const counterRef = db.ref('visite');
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const counterElement = document.getElementById("visite-counter");
+
+      counterRef.once('value')
+        .then(snapshot => {
+          let count = snapshot.exists() ? snapshot.val() : 0;
+          count++;
+          return counterRef.set(count).then(() => count);
+        })
+        .then(updatedCount => {
+          counterElement.innerText = updatedCount;
+        })
+        .catch(error => {
+          console.error("Errore nel contatore Firebase:", error);
+          counterElement.innerText = "Errore";
+        });
+    });
+  </script>
 </body>
 </html>
